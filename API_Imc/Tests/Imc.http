@@ -1,0 +1,24 @@
+### Listar as imcs
+GET https://localhost:5001/api/imc/listar
+
+### Buscar imc
+GET https://localhost:5001/api/imc/buscar/
+
+### Cadastrar um imc
+POST https://localhost:5001/api/imc/cadastrar
+Content-Type: application/json
+
+{
+    "peso" : 70,
+    "altura" : 1.8,
+    "usuarioid": 3
+}
+
+### Alterar um imc
+PATCH https://localhost:5001/api/imc/alterar/1
+Content-Type: application/json
+
+{
+    "peso" : 60,
+    "altura" : 1.1
+}

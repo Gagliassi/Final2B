@@ -1,0 +1,23 @@
+<table>
+    <tr>
+      <th>#</th>
+      <th>Usuarios</th>
+      <th>Peso</th>
+      <th>Altura</th>
+      <th>Imc</th>
+      <th>ClassificaçãoImc</th>
+      <th>Data</th>
+    </tr>
+    <tr *ngFor="let imc of imcs">
+      <td>{{ imc.id }}</td>
+      <td>{{ imc.usuario?.nome }}</td>
+      <td>{{ imc.peso }}</td>
+      <td>{{ imc.altura }}</td>
+      <td>{{ imc.imc}}</td>
+      <td>{{ imc.classificacaoImc}}</td>
+      <td>{{ imc.criadoEm | date: "dd/MM/yyyy" }}</td>
+      <td>
+        <a routerLink="/pages/imc/cadastrar/{{ imc.imc }}"> Alterar </a>
+      </td>
+    </tr>
+  </table>
